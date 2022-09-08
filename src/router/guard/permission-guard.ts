@@ -32,9 +32,9 @@ export function createPermissionGuard(router: Router) {
       toLogin();
       window.$message?.error(error.message || "获取用户信息失败！");
     });
-    await permissionStore.getSysUserMenuRoutes().catch((err) => {
-      console.log(err);
-    });
+    // await permissionStore.getSysUserMenuRoutes().catch((err) => {
+    //   console.log(err);
+    // });
     // const accessRoutes = permissionStore.generateRoutes(userStore.role);
     const accessRoutes: any = await permissionStore.getSysUserMenuRoutes();
     accessRoutes.forEach((route: RouteType) => {

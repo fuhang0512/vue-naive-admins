@@ -14,7 +14,10 @@ export function setupVitePlugins(
 ): PluginOption[] {
   const plugins = [
     vue(),
-    vueJsx(),
+    vueJsx({
+      transformOn: true,
+      mergeProps: true,
+    }),
     ...unplugins,
     unocss(),
     setupHtmlPlugin(viteEnv),
