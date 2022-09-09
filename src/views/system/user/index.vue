@@ -1,13 +1,25 @@
+<!--
+ * @Description: 
+ * @Author: FuHang
+ * @Date: 2022-09-08 19:46:50
+ * @LastEditTime: 2022-09-08 23:05:31
+ * @LastEditors: Please set LastEditors
+ * @FilePath: \vue-naive-admin\src\views\system\user\index.vue
+-->
 <template>
   <div>
-    <custom-table :columns="columns" :data="tableData"></custom-table>
+    <custom-table
+      :columns="columns"
+      :data="tableData"
+      title="用户管理"
+    ></custom-table>
     <n-button @click="handleClickIsPushColumns">测试</n-button>
   </div>
 </template>
 
 <script setup lang="tsx">
 import { NButton, NPopconfirm, NSpace } from "naive-ui";
-import customTable from "@/components/custom-table/index";
+import customTable from "@/components/custom-table/index.vue";
 import { ApiUser } from "@/api/index";
 
 const columns = ref([

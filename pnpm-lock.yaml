@@ -35,6 +35,7 @@ specifiers:
   vue: ^3.2.37
   vue-router: ^4.1.5
   vue-tsc: ^0.40.4
+  vuedraggable: ^2.24.3
 
 dependencies:
   '@vueuse/core': 9.2.0_vue@3.2.38
@@ -47,6 +48,7 @@ dependencies:
   qs: 6.11.0
   vue: 3.2.38
   vue-router: 4.1.5_vue@3.2.38
+  vuedraggable: 2.24.3
 
 devDependencies:
   '@iconify/json': 2.1.103
@@ -3515,6 +3517,10 @@ packages:
       - supports-color
     dev: true
 
+  /sortablejs/1.10.2:
+    resolution: {integrity: sha512-YkPGufevysvfwn5rfdlGyrGjt7/CRHwvRPogD/lC+TnvcN29jDpCifKP+rBqf+LRldfXSTh+0CGLcSg0VIxq3A==}
+    dev: false
+
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -4173,6 +4179,12 @@ packages:
       '@vue/runtime-dom': 3.2.38
       '@vue/server-renderer': 3.2.38_vue@3.2.38
       '@vue/shared': 3.2.38
+
+  /vuedraggable/2.24.3:
+    resolution: {integrity: sha512-6/HDXi92GzB+Hcs9fC6PAAozK1RLt1ewPTLjK0anTYguXLAeySDmcnqE8IC0xa7shvSzRjQXq3/+dsZ7ETGF3g==}
+    dependencies:
+      sortablejs: 1.10.2
+    dev: false
 
   /vueuc/0.4.48_vue@3.2.38:
     resolution: {integrity: sha512-dQTBLxCzfaPuzD3c4/dIxAULtnyY+xwdotCRFUDgf0DJiwuR3tI+txJ9K8uJKmaHwc1JDUVqhRAj9Jd/pvInWg==}
