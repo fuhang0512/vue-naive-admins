@@ -2,14 +2,14 @@
  * @Description:
  * @Author: FuHang
  * @Date: 2022-09-08 15:11:07
- * @LastEditTime: 2022-09-08 23:03:30
+ * @LastEditTime: 2022-09-12 23:16:20
  * @LastEditors: Please set LastEditors
  * @FilePath: \vue-naive-admin\src\components\custom-table\index.tsx
  */
 import { NButton, NCard, NDataTable, NSpace } from "naive-ui";
 import { defineComponent, ref } from "vue";
 import { renderIcon } from "~/src/utils/common/icon";
-import CustomIcon from "@/components/custom/CustomIcon";
+import CustomIcon from "~/src/components/custom/CustomIcon";
 export default defineComponent({
   props: {
     columns: {

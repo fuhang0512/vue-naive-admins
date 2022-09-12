@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: FuHang
  * @Date: 2022-09-08 19:46:50
- * @LastEditTime: 2022-09-08 23:05:31
+ * @LastEditTime: 2022-09-12 23:17:12
  * @LastEditors: Please set LastEditors
  * @FilePath: \vue-naive-admin\src\views\system\user\index.vue
 -->
@@ -19,7 +19,7 @@
 
 <script setup lang="tsx">
 import { NButton, NPopconfirm, NSpace } from "naive-ui";
-import customTable from "@/components/custom-table/index.vue";
+import customTable from "@/components/custom/custom-table/index.vue";
 import { ApiUser } from "@/api/index";
 
 const columns = ref([

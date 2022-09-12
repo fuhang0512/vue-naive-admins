@@ -2,9 +2,9 @@
  * @Description: 
  * @Author: FuHang
  * @Date: 2022-09-08 23:04:28
- * @LastEditTime: 2022-09-12 22:57:01
+ * @LastEditTime: 2022-09-12 23:21:28
  * @LastEditors: Please set LastEditors
- * @FilePath: \vue-naive-admin\src\components\custom-table\index.vue
+ * @FilePath: \vue-naive-admin\src\components\custom\custom-table\index.vue
 -->
 <template>
   <n-card :title="props.title" size="small" :content-style="{ padding: 0 }">
@@ -15,11 +15,11 @@
         <icon-ant-design:setting-outlined /> -->
         <custom-icon
           icon="ant-design:reload-outlined"
-          size="20"
+          :size="20"
           @click="handleReloadTableData"
         />
-        <custom-icon icon="ant-design:column-height-outlined" size="20" />
-        <custom-icon icon="ant-design:setting-outlined" size="20" />
+        <custom-icon icon="ant-design:column-height-outlined" :size="20" />
+        <custom-icon icon="ant-design:setting-outlined" :size="20" />
         <n-icon cursor-pointer size="20" @click="toggle">
           <icon-ant-design:fullscreen-exit-outlined v-if="isFullscreen" />
           <icon-ant-design:fullscreen-outlined v-else />
