@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: FuHang
  * @Date: 2022-09-08 19:46:50
- * @LastEditTime: 2022-09-12 23:17:12
+ * @LastEditTime: 2022-09-13 22:09:47
  * @LastEditors: Please set LastEditors
  * @FilePath: \vue-naive-admin\src\views\system\user\index.vue
 -->
@@ -12,6 +12,8 @@
       :columns="columns"
       :data="tableData"
       title="用户管理"
+      @page-data="getPageList"
+      :loading="tableLoading"
     ></custom-table>
     <n-button @click="handleClickIsPushColumns">测试</n-button>
   </div>
@@ -59,6 +61,7 @@ const columns = ref([
 ]);
 
 const tableData = ref([]);
+let tableLoading = ref(false);
 
 const handleClickIsPushColumns = () => {
   columns.value.push({
@@ -81,14 +84,21 @@ const pages = ref({
 });
 
 const getPageList = async () => {
+  tableLoading.value = true;
   const res: any = await ApiUser.getPaginationList(
     Object.assign({
       current: pages.value.current,
       size: pages.value.size,
     })
-  );
+  )
+    .catch((err) => {
+      console.log("报错信息", err);
+    })
+    .finally(() => {
+      tableLoading.value = false;
+    });
   if (res?.code !== 200) {
-    return console.log("报错了");
+    return console.log("请求失败");
   }
   tableData.value = res?.data?.records;
 };

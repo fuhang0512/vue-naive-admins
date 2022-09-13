@@ -2,8 +2,8 @@
  * @Description:
  * @Author: FuHang
  * @Date: 2022-09-06 20:20:39
- * @LastEditTime: 2022-09-12 23:19:33
- * @LastEditors:
+ * @LastEditTime: 2022-09-13 20:54:07
+ * @LastEditors: Please set LastEditors
  * @FilePath: \vue-naive-admin\src\utils\common\icon.ts
  */
 import { h } from "vue";
@@ -17,8 +17,6 @@ interface Props {
 }
 
 export function renderIcon(icon: string, props: Props = { size: 12 }) {
-  console.log(props);
-
   return () => h(NIcon, props, { default: () => h(Icon, { icon }) });
 }
 

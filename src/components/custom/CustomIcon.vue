@@ -2,13 +2,13 @@
  * @Description: 
  * @Author: FuHang
  * @Date: 2022-09-06 20:20:39
- * @LastEditTime: 2022-09-12 23:21:00
+ * @LastEditTime: 2022-09-13 22:02:02
  * @LastEditors: Please set LastEditors
  * @FilePath: \vue-naive-admin\src\components\custom\CustomIcon.vue
 -->
 <script setup lang="ts">
 // renderCustomIcon,
-import { renderIcon } from "@/utils/common";
+import { renderCustomIcon } from "@/utils/common";
 
 interface Props {
   /** 图标名称(图片的文件名) */
@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<Props>(), {
   size: 14,
 });
 
-const iconCom = computed(() => renderIcon(props.icon, props));
+const iconCom = computed(() => renderCustomIcon(props.icon, props));
 </script>
 
 <template>

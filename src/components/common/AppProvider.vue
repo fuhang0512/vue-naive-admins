@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: FuHang
+ * @Date: 2022-09-06 20:20:39
+ * @LastEditTime: 2022-09-13 20:49:20
+ * @LastEditors: 
+ * @FilePath: \vue-naive-admin\src\components\common\AppProvider.vue
+-->
 <script setup lang="ts">
 import { kebabCase } from "lodash-es";
 import {
@@ -11,11 +19,12 @@ import type { GlobalThemeOverrides } from "naive-ui";
 // import { zhCN, dateZhCN } from "naive-ui";
 import { useThemeStore } from "@/store";
 import { zhCN, dateZhCN } from "naive-ui";
+import { setupDialog } from "~/src/utils/common/naiveTools";
 // 挂载naive组件的方法至window, 以便在全局使用
 function setupNaiveTools() {
   window.$loadingBar = useLoadingBar();
   window.$message = useMessage();
-  window.$dialog = useDialog();
+  window.$dialog = setupDialog(useDialog());
   window.$notification = useNotification();
 }
 
