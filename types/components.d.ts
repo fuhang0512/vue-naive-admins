@@ -10,7 +10,7 @@ declare module '@vue/runtime-core' {
     AppFooter: typeof import('./../src/components/common/AppFooter.vue')['default']
     AppProvider: typeof import('./../src/components/common/AppProvider.vue')['default']
     CustomIcon: typeof import('./../src/components/custom/CustomIcon.vue')['default']
-    CustomTable: typeof import('./../src/components/custom-table/index.vue')['default']
+    CustomTable: typeof import('./../src/components/custom/custom-table/index.vue')['default']
     'IconAntDesign:columnHeightOutlined': typeof import("~icons/ant-design/column-height-outlined")["default"]
     'IconAntDesign:fullscreenExitOutlined': typeof import('~icons/ant-design/fullscreen-exit-outlined')['default']
     'IconAntDesign:fullscreenOutlined': typeof import('~icons/ant-design/fullscreen-outlined')['default']
